@@ -37,7 +37,7 @@ namespace Claro_nicaragua
                 " WHERE convert(char(10),sc.fecha,103)='"+string.Format("{0:dd/MM/yyyy}",cbdia.SelectedValue)+"' and (sc.id_centro = '" + modulo.id_sucursal + "') and sc.id_cartero='" + id + "' AND (id_estado = 'A') and exists(select pce.codigo from PE_claro pce where pce.contrato=pe.contrato and pce.mes= (pe.mes+1) and pce.año=year(getdate()))");
             if(dt_sugerencia.Rows.Count>0)
             {
-                dgvsugerencia.DataSource = null;
+                //dgvsugerencia.DataSource = null;
                 dgvsugerencia.DataSource = dt_sugerencia.AsDataView();
                 dgvsugerencia.Visible = true;
                 panelinfosugerencia.Visible = false;
