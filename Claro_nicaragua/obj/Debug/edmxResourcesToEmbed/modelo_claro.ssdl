@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Pruebas_entregaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Barrios_aprendidos_claro">
+    <Key>
+      <PropertyRef Name="id_barrio" />
+      <PropertyRef Name="idcentro" />
+      <PropertyRef Name="zona" />
+    </Key>
+    <Property Name="id_barrio" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="idcentro" Type="int" Nullable="false" />
+    <Property Name="Barrio" Type="varchar" MaxLength="100" />
+    <Property Name="zona" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cartero">
+    <Key>
+      <PropertyRef Name="id_cartero" />
+    </Key>
+    <Property Name="id_cartero" Type="int" Nullable="false" />
+    <Property Name="Nombres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="id_centro" Type="int" />
+    <Property Name="telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="id_destino" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Pruebas_entrega.dbo.estados_claro' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="estados_claro">
+    <Key>
+      <PropertyRef Name="id_estado" />
+      <PropertyRef Name="descripcion" />
+    </Key>
+    <Property Name="id_estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Pruebas_entrega.dbo.incidencia_claro' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="incidencia_claro">
+    <Key>
+      <PropertyRef Name="id_incidencia" />
+      <PropertyRef Name="incidencia" />
+    </Key>
+    <Property Name="id_incidencia" Type="int" Nullable="false" />
+    <Property Name="incidencia" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OficinaPostal">
+    <Key>
+      <PropertyRef Name="IdCentro" />
+    </Key>
+    <Property Name="IdCentro" Type="int" Nullable="false" />
+    <Property Name="NombreCentro" Type="nvarchar" MaxLength="45" />
+    <Property Name="Coordinador" Type="nvarchar" MaxLength="35" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="65" />
+    <Property Name="NumeroTelefono" Type="nvarchar" MaxLength="12" />
+    <Property Name="NumeroFax" Type="nvarchar" MaxLength="12" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="20" />
+    <Property Name="Abreviatura" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Pruebas_entrega.dbo.PE_claro' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="PE_claro">
+    <Key>
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="consecutivo" />
+      <PropertyRef Name="contrato" />
+      <PropertyRef Name="factura" />
+      <PropertyRef Name="ciclo" />
+      <PropertyRef Name="mes" />
+      <PropertyRef Name="año" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Codigo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="consecutivo" Type="int" Nullable="false" />
+    <Property Name="contrato" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="factura" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ciclo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="cliente" Type="varchar" MaxLength="300" />
+    <Property Name="direccion" Type="varchar" MaxLength="900" />
+    <Property Name="barrio" Type="varchar" MaxLength="200" />
+    <Property Name="municipio" Type="varchar" MaxLength="100" />
+    <Property Name="departamento" Type="varchar" MaxLength="100" />
+    <Property Name="Distribuido" Type="nvarchar" MaxLength="30" />
+    <Property Name="Ruta" Type="nvarchar" MaxLength="50" />
+    <Property Name="zona" Type="int" />
+    <Property Name="telefono" Type="nvarchar" MaxLength="15" />
+    <Property Name="Segmento" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdBarrio" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdDepartamento" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdMunicipio" Type="nvarchar" MaxLength="50" />
+    <Property Name="servicio" Type="varchar" MaxLength="50" />
+    <Property Name="num_imposicion" Type="int" />
+    <Property Name="fecha" Type="datetime" />
+    <Property Name="ARCHIVO_SEGMENTADO" Type="nvarchar" MaxLength="100" />
+    <Property Name="tarifa_destino" Type="nvarchar" MaxLength="30" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Disponible" Type="bit" />
+    <Property Name="Disponible_distribucion" Type="bit" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Pruebas_entrega.dbo.seguimiento_claro' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="seguimiento_claro">
+    <Key>
+      <PropertyRef Name="cod_envio" />
+      <PropertyRef Name="id_estado" />
+      <PropertyRef Name="fecha" />
+    </Key>
+    <Property Name="cod_envio" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="nombreuser" Type="nvarchar" MaxLength="30" />
+    <Property Name="id_centro" Type="int" />
+    <Property Name="incidencia" Type="int" />
+    <Property Name="id_cartero" Type="int" />
+    <Property Name="id_centro_destino" Type="int" />
+    <Property Name="Nodespacho" Type="int" />
+  </EntityType>
+  <EntityContainer Name="Pruebas_entregaModelStoreContainer">
+    <EntitySet Name="Barrios_aprendidos_claro" EntityType="Self.Barrios_aprendidos_claro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cartero" EntityType="Self.cartero" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OficinaPostal" EntityType="Self.OficinaPostal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="estados_claro" EntityType="Self.estados_claro" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [estados_claro].[id_estado] AS [id_estado], 
+    [estados_claro].[descripcion] AS [descripcion]
+    FROM [dbo].[estados_claro] AS [estados_claro]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="incidencia_claro" EntityType="Self.incidencia_claro" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [incidencia_claro].[id_incidencia] AS [id_incidencia], 
+    [incidencia_claro].[incidencia] AS [incidencia]
+    FROM [dbo].[incidencia_claro] AS [incidencia_claro]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PE_claro" EntityType="Self.PE_claro" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PE_claro].[Codigo] AS [Codigo], 
+    [PE_claro].[consecutivo] AS [consecutivo], 
+    [PE_claro].[contrato] AS [contrato], 
+    [PE_claro].[factura] AS [factura], 
+    [PE_claro].[ciclo] AS [ciclo], 
+    [PE_claro].[mes] AS [mes], 
+    [PE_claro].[año] AS [año], 
+    [PE_claro].[cliente] AS [cliente], 
+    [PE_claro].[direccion] AS [direccion], 
+    [PE_claro].[barrio] AS [barrio], 
+    [PE_claro].[municipio] AS [municipio], 
+    [PE_claro].[departamento] AS [departamento], 
+    [PE_claro].[Distribuido] AS [Distribuido], 
+    [PE_claro].[Ruta] AS [Ruta], 
+    [PE_claro].[zona] AS [zona], 
+    [PE_claro].[telefono] AS [telefono], 
+    [PE_claro].[Segmento] AS [Segmento], 
+    [PE_claro].[IdBarrio] AS [IdBarrio], 
+    [PE_claro].[IdDepartamento] AS [IdDepartamento], 
+    [PE_claro].[IdMunicipio] AS [IdMunicipio], 
+    [PE_claro].[servicio] AS [servicio], 
+    [PE_claro].[num_imposicion] AS [num_imposicion], 
+    [PE_claro].[fecha] AS [fecha], 
+    [PE_claro].[ARCHIVO_SEGMENTADO] AS [ARCHIVO_SEGMENTADO], 
+    [PE_claro].[tarifa_destino] AS [tarifa_destino], 
+    [PE_claro].[id] AS [id], 
+    [PE_claro].[Disponible] AS [Disponible], 
+    [PE_claro].[Disponible_distribucion] AS [Disponible_distribucion]
+    FROM [dbo].[PE_claro] AS [PE_claro]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="seguimiento_claro" EntityType="Self.seguimiento_claro" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [seguimiento_claro].[cod_envio] AS [cod_envio], 
+    [seguimiento_claro].[id_estado] AS [id_estado], 
+    [seguimiento_claro].[fecha] AS [fecha], 
+    [seguimiento_claro].[nombreuser] AS [nombreuser], 
+    [seguimiento_claro].[id_centro] AS [id_centro], 
+    [seguimiento_claro].[incidencia] AS [incidencia], 
+    [seguimiento_claro].[id_cartero] AS [id_cartero], 
+    [seguimiento_claro].[id_centro_destino] AS [id_centro_destino], 
+    [seguimiento_claro].[Nodespacho] AS [Nodespacho]
+    FROM [dbo].[seguimiento_claro] AS [seguimiento_claro]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

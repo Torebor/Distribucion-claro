@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="claro_entity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="claro_model" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="print_remision" ReturnType="Collection(claro_entity.print_remision_Result)">
+      <Parameter Name="nodespacho" Mode="In" Type="Int32" />
+      <Parameter Name="cabecera_dep" Mode="In" Type="String" />
+      <Parameter Name="destino" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="print_busqueda" ReturnType="Collection(claro_entity.print_busqueda_Result)" />
+    <FunctionImport Name="print_pruebas">
+      <Parameter Name="departamento" Mode="In" Type="String" />
+      <Parameter Name="imposicion" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="print_remision_Result">
+    <Property Type="String" Name="cod_envio" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="fecha_expedicion" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="origen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="destino" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Num_paquete" Nullable="true" />
+    <Property Type="String" Name="NombreDestino" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="nombre_completo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="direccion" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="Num_imposicion" Nullable="false" />
+    <Property Type="String" Name="Fecha" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="print_busqueda_Result">
+    <Property Type="String" Name="Nombres" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="No_cedula" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="departamento" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Barrio" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="direccion" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="Número_de_envio" Nullable="true" />
+    <Property Type="DateTime" Name="Fecha_de_envio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Fecha_de_recibido" Nullable="false" Precision="23" />
+  </ComplexType>
+</Schema>

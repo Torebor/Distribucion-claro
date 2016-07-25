@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Pruebas_entregaModelStoreContainer" CdmEntityContainer="Pruebas_entregaEntities">
+    <EntitySetMapping Name="cartero">
+      <EntityTypeMapping TypeName="Pruebas_entregaModel.cartero">
+        <MappingFragment StoreEntitySet="cartero">
+          <ScalarProperty Name="id_cartero" ColumnName="id_cartero" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="id_centro" ColumnName="id_centro" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="id_destino" ColumnName="id_destino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OficinaPostal">
+      <EntityTypeMapping TypeName="Pruebas_entregaModel.OficinaPostal">
+        <MappingFragment StoreEntitySet="OficinaPostal">
+          <ScalarProperty Name="IdCentro" ColumnName="IdCentro" />
+          <ScalarProperty Name="NombreCentro" ColumnName="NombreCentro" />
+          <ScalarProperty Name="Coordinador" ColumnName="Coordinador" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="NumeroTelefono" ColumnName="NumeroTelefono" />
+          <ScalarProperty Name="NumeroFax" ColumnName="NumeroFax" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Abreviatura" ColumnName="Abreviatura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estados_claro">
+      <EntityTypeMapping TypeName="Pruebas_entregaModel.estados_claro">
+        <MappingFragment StoreEntitySet="estados_claro">
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="incidencia_claro">
+      <EntityTypeMapping TypeName="Pruebas_entregaModel.incidencia_claro">
+        <MappingFragment StoreEntitySet="incidencia_claro">
+          <ScalarProperty Name="id_incidencia" ColumnName="id_incidencia" />
+          <ScalarProperty Name="incidencia" ColumnName="incidencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PE_claro">
+      <EntityTypeMapping TypeName="Pruebas_entregaModel.PE_claro">
+        <MappingFragment StoreEntitySet="PE_claro">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="consecutivo" ColumnName="consecutivo" />
+          <ScalarProperty Name="contrato" ColumnName="contrato" />
+          <ScalarProperty Name="factura" ColumnName="factura" />
+          <ScalarProperty Name="ciclo" ColumnName="ciclo" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+          <ScalarProperty Name="cliente" ColumnName="cliente" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="barrio" ColumnName="barrio" />
+          <ScalarProperty Name="municipio" ColumnName="municipio" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="Distribuido" ColumnName="Distribuido" />
+          <ScalarProperty Name="Ruta" ColumnName="Ruta" />
+          <ScalarProperty Name="zona" ColumnName="zona" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="Segmento" ColumnName="Segmento" />
+          <ScalarProperty Name="IdBarrio" ColumnName="IdBarrio" />
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+          <ScalarProperty Name="servicio" ColumnName="servicio" />
+          <ScalarProperty Name="num_imposicion" ColumnName="num_imposicion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="ARCHIVO_SEGMENTADO" ColumnName="ARCHIVO_SEGMENTADO" />
+          <ScalarProperty Name="tarifa_destino" ColumnName="tarifa_destino" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Disponible" ColumnName="Disponible" />
+          <ScalarProperty Name="Disponible_distribucion" ColumnName="Disponible_distribucion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seguimiento_claro">
+      <EntityTypeMapping TypeName="Pruebas_entregaModel.seguimiento_claro">
+        <MappingFragment StoreEntitySet="seguimiento_claro">
+          <ScalarProperty Name="cod_envio" ColumnName="cod_envio" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="nombreuser" ColumnName="nombreuser" />
+          <ScalarProperty Name="id_centro" ColumnName="id_centro" />
+          <ScalarProperty Name="incidencia" ColumnName="incidencia" />
+          <ScalarProperty Name="id_cartero" ColumnName="id_cartero" />
+          <ScalarProperty Name="id_centro_destino" ColumnName="id_centro_destino" />
+          <ScalarProperty Name="Nodespacho" ColumnName="Nodespacho" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Barrios_aprendidos_claro">
+      <EntityTypeMapping TypeName="Pruebas_entregaModel.Barrios_aprendidos_claro">
+        <MappingFragment StoreEntitySet="Barrios_aprendidos_claro">
+          <ScalarProperty Name="zona" ColumnName="zona" />
+          <ScalarProperty Name="Barrio" ColumnName="Barrio" />
+          <ScalarProperty Name="idcentro" ColumnName="idcentro" />
+          <ScalarProperty Name="id_barrio" ColumnName="id_barrio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

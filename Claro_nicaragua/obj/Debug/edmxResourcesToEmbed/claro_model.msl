@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="claro_entityStoreContainer" CdmEntityContainer="claro_model">
+    <FunctionImportMapping FunctionImportName="print_remision" FunctionName="claro_entity.Store.print_remision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="claro_entity.print_remision_Result">
+          <ScalarProperty Name="cod_envio" ColumnName="cod_envio" />
+          <ScalarProperty Name="fecha_expedicion" ColumnName="fecha expedicion" />
+          <ScalarProperty Name="origen" ColumnName="origen" />
+          <ScalarProperty Name="destino" ColumnName="destino" />
+          <ScalarProperty Name="Num_paquete" ColumnName="Num_paquete" />
+          <ScalarProperty Name="NombreDestino" ColumnName="NombreDestino" />
+          <ScalarProperty Name="nombre_completo" ColumnName="nombre_completo" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="Num_imposicion" ColumnName="Num_imposicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="print_busqueda" FunctionName="claro_entity.Store.print_busqueda">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="claro_entity.print_busqueda_Result">
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="No_cedula" ColumnName="No cedula" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="Barrio" ColumnName="Barrio" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="Número_de_envio" ColumnName="Número de envio" />
+          <ScalarProperty Name="Fecha_de_envio" ColumnName="Fecha de envio" />
+          <ScalarProperty Name="Fecha_de_recibido" ColumnName="Fecha de recibido" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="print_pruebas" FunctionName="claro_entity.Store.print_pruebas" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Pruebas_entregaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cartero">
+    <Key>
+      <PropertyRef Name="id_cartero" />
+    </Key>
+    <Property Name="id_cartero" Type="Int32" Nullable="false" />
+    <Property Name="Nombres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_centro" Type="Int32" />
+    <Property Name="telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="id_destino" Type="Int32" />
+  </EntityType>
+  <EntityType Name="OficinaPostal">
+    <Key>
+      <PropertyRef Name="IdCentro" />
+    </Key>
+    <Property Name="IdCentro" Type="Int32" Nullable="false" />
+    <Property Name="NombreCentro" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinador" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="65" FixedLength="false" Unicode="true" />
+    <Property Name="NumeroTelefono" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="NumeroFax" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CorreoElectronico" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Abreviatura" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="estados_claro">
+    <Key>
+      <PropertyRef Name="id_estado" />
+      <PropertyRef Name="descripcion" />
+    </Key>
+    <Property Name="id_estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="incidencia_claro">
+    <Key>
+      <PropertyRef Name="id_incidencia" />
+      <PropertyRef Name="incidencia" />
+    </Key>
+    <Property Name="id_incidencia" Type="Int32" Nullable="false" />
+    <Property Name="incidencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PE_claro">
+    <Key>
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="consecutivo" />
+      <PropertyRef Name="contrato" />
+      <PropertyRef Name="factura" />
+      <PropertyRef Name="ciclo" />
+      <PropertyRef Name="mes" />
+      <PropertyRef Name="año" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="consecutivo" Type="Int32" Nullable="false" />
+    <Property Name="contrato" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="factura" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ciclo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mes" Type="Int32" Nullable="false" />
+    <Property Name="año" Type="Int32" Nullable="false" />
+    <Property Name="cliente" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="900" FixedLength="false" Unicode="false" />
+    <Property Name="barrio" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="municipio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="departamento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Distribuido" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Ruta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="zona" Type="Int32" />
+    <Property Name="telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Segmento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdBarrio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdDepartamento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdMunicipio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="servicio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="num_imposicion" Type="Int32" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+    <Property Name="ARCHIVO_SEGMENTADO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="tarifa_destino" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Disponible" Type="Boolean" />
+    <Property Name="Disponible_distribucion" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="seguimiento_claro">
+    <Key>
+      <PropertyRef Name="cod_envio" />
+      <PropertyRef Name="id_estado" />
+      <PropertyRef Name="fecha" />
+    </Key>
+    <Property Name="cod_envio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nombreuser" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="id_centro" Type="Int32" />
+    <Property Name="incidencia" Type="Int32" />
+    <Property Name="id_cartero" Type="Int32" />
+    <Property Name="id_centro_destino" Type="Int32" />
+    <Property Name="Nodespacho" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="Pruebas_entregaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cartero" EntityType="Self.cartero" />
+    <EntitySet Name="OficinaPostal" EntityType="Self.OficinaPostal" />
+    <EntitySet Name="estados_claro" EntityType="Self.estados_claro" />
+    <EntitySet Name="incidencia_claro" EntityType="Self.incidencia_claro" />
+    <EntitySet Name="PE_claro" EntityType="Self.PE_claro" />
+    <EntitySet Name="seguimiento_claro" EntityType="Self.seguimiento_claro" />
+    <EntitySet Name="Barrios_aprendidos_claro" EntityType="Pruebas_entregaModel.Barrios_aprendidos_claro" />
+  </EntityContainer>
+  <EntityType Name="Barrios_aprendidos_claro">
+    <Key>
+      <PropertyRef Name="id_barrio" />
+      <PropertyRef Name="idcentro" />
+      <PropertyRef Name="zona" />
+    </Key>
+    <Property Name="id_barrio" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="idcentro" Type="Int32" Nullable="false" />
+    <Property Name="Barrio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="zona" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
