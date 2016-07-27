@@ -74,6 +74,24 @@ namespace Claro_nicaragua
                         MessageBoxAdv.Show("Esta factura no pertenece al centro!!, ¿Desea continuar de todas formas? ", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }*/
+
+                /*BUscamos que la factura exista en la tabla PE_claro*/
+                    if (modulo.verificar_codigo(txtcodigo.Text.Trim()) == 2)
+                    {
+                        MessageBoxAdv.MessageBoxStyle = MessageBoxAdv.Style.Metro;
+                        MessageBoxAdv.Show("No se pudo establecer conexión con la base de datos, intentarlo mas tarde", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtcodigo.SelectionStart = 0;
+                        txtcodigo.SelectionLength = txtcodigo.Text.Length;
+                        txtcodigo.Focus();
+                        return;
+                    }
+                    else if (modulo.verificar_codigo(txtcodigo.Text.Trim())==1)
+                    {
+                        MessageBoxAdv.MessageBoxStyle = MessageBoxAdv.Style.Metro;
+                        MessageBoxAdv.Show("Esta factura no ha sido cargada al sistema", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     acceso = new conexion();
                     DataTable dt_sin_estados = acceso.buscar("select * from ",
                         "pe_claro ",

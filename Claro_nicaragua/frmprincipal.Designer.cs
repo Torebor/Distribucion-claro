@@ -888,12 +888,12 @@ namespace Claro_nicaragua
             // cbcarteros
             // 
             this.cbcarteros.BackColor = System.Drawing.Color.White;
-            this.cbcarteros.BeforeTouchSize = new System.Drawing.Size(223, 19);
+            this.cbcarteros.BeforeTouchSize = new System.Drawing.Size(223, 23);
             this.cbcarteros.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
             this.cbcarteros.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbcarteros.Location = new System.Drawing.Point(77, 14);
             this.cbcarteros.Name = "cbcarteros";
-            this.cbcarteros.Size = new System.Drawing.Size(223, 19);
+            this.cbcarteros.Size = new System.Drawing.Size(223, 23);
             this.cbcarteros.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cbcarteros.TabIndex = 13;
             this.cbcarteros.UseMetroColorsInActiveMode = true;
@@ -960,7 +960,7 @@ namespace Claro_nicaragua
             this.dgvdistribucion.Location = new System.Drawing.Point(29, 51);
             this.dgvdistribucion.Name = "dgvdistribucion";
             this.dgvdistribucion.ShowNavigationBar = true;
-            this.dgvdistribucion.Size = new System.Drawing.Size(895, 332);
+            this.dgvdistribucion.Size = new System.Drawing.Size(818, 332);
             this.dgvdistribucion.TabIndex = 22;
             this.dgvdistribucion.TableDescriptor.AllowEdit = false;
             this.dgvdistribucion.TableDescriptor.AllowNew = false;
@@ -1210,7 +1210,7 @@ namespace Claro_nicaragua
             // cbincidencias
             // 
             this.cbincidencias.BackColor = System.Drawing.Color.White;
-            this.cbincidencias.BeforeTouchSize = new System.Drawing.Size(215, 19);
+            this.cbincidencias.BeforeTouchSize = new System.Drawing.Size(215, 23);
             this.cbincidencias.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
             this.cbincidencias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbincidencias.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1227,7 +1227,7 @@ namespace Claro_nicaragua
             this.cbincidencias.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cbincidencias, "Rechazo"));
             this.cbincidencias.Location = new System.Drawing.Point(139, 3);
             this.cbincidencias.Name = "cbincidencias";
-            this.cbincidencias.Size = new System.Drawing.Size(215, 19);
+            this.cbincidencias.Size = new System.Drawing.Size(215, 23);
             this.cbincidencias.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cbincidencias.TabIndex = 21;
             this.cbincidencias.Text = "Ninguno";
@@ -1411,7 +1411,7 @@ namespace Claro_nicaragua
             this.dgvseguimiento.Location = new System.Drawing.Point(26, 210);
             this.dgvseguimiento.Name = "dgvseguimiento";
             this.dgvseguimiento.ShowNavigationBar = true;
-            this.dgvseguimiento.Size = new System.Drawing.Size(900, 182);
+            this.dgvseguimiento.Size = new System.Drawing.Size(823, 182);
             this.dgvseguimiento.TabIndex = 9;
             this.dgvseguimiento.TableDescriptor.AllowEdit = false;
             this.dgvseguimiento.TableDescriptor.AllowNew = false;
@@ -1461,7 +1461,7 @@ namespace Claro_nicaragua
             this.btnimport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnimport.ForeColor = System.Drawing.Color.White;
             this.btnimport.IsBackStageButton = false;
-            this.btnimport.Location = new System.Drawing.Point(601, 23);
+            this.btnimport.Location = new System.Drawing.Point(524, 23);
             this.btnimport.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(75)))), ((int)(((byte)(139)))));
             this.btnimport.Name = "btnimport";
             this.btnimport.Size = new System.Drawing.Size(110, 28);
@@ -1590,7 +1590,7 @@ namespace Claro_nicaragua
             this.dgvcysegui.Location = new System.Drawing.Point(23, 63);
             this.dgvcysegui.Name = "dgvcysegui";
             this.dgvcysegui.ShowNavigationBar = true;
-            this.dgvcysegui.Size = new System.Drawing.Size(907, 320);
+            this.dgvcysegui.Size = new System.Drawing.Size(830, 320);
             this.dgvcysegui.TabIndex = 10;
             this.dgvcysegui.TableDescriptor.AllowEdit = false;
             this.dgvcysegui.TableDescriptor.AllowNew = false;

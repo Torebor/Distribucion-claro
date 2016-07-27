@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Claro_nicaragua.exe" size="574976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Claro_nicaragua.exe" size="576000">
       <assemblyIdentity name="Claro_nicaragua" version="1.0.0.0" publicKeyToken="8B0856F4A67CD23D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xmYx+l6jPrmWOwGtHedQZTTKYh8=</dsig:DigestValue>
+        <dsig:DigestValue>eupFbpY3y8F0BE2HBSpQ+OeKQw8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -230,7 +230,23 @@ namespace Claro_nicaragua
                         return;
                     }
 
-                    acceso = new conexion();
+                if (modulo.verificar_codigo(txtcodigo.Text.Trim()) == 2)
+                {
+                    MessageBoxAdv.MessageBoxStyle = MessageBoxAdv.Style.Metro;
+                    MessageBoxAdv.Show("No se pudo establecer conexión con la base de datos, intentarlo mas tarde", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtcodigo.SelectionStart = 0;
+                    txtcodigo.SelectionLength = txtcodigo.Text.Length;
+                    txtcodigo.Focus();
+                    return;
+                }
+                else if (modulo.verificar_codigo(txtcodigo.Text.Trim()) == 1)
+                {
+                    MessageBoxAdv.MessageBoxStyle = MessageBoxAdv.Style.Metro;
+                    MessageBoxAdv.Show("Esta factura no ha sido cargada al sistema", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                acceso = new conexion();
                     DataTable dt_existing_event = acceso.buscar("select * from ",
                         " PE_claro pc ",
                         "where pc.codigo='"+txtcodigo.Text + "' and not exists(select * from seguimiento_claro sc where sc.cod_envio='" + txtcodigo.Text + "' and sc.id_estado in ('D','B','C','F','A') and sc.id_centro='"+modulo.id_sucursal+"' and nodespacho='"+txtdespacho.Text+"')");

@@ -63,6 +63,31 @@ namespace Claro_nicaragua.clases
                 result = 2;
             }
             return result;
+        }
+        
+        public static int verificar_codigo(string codigo)
+        {
+            int result = 0;
+            conexion acceso;
+            /*buscamos que el codigo de envio pertenesca al centro de distibucion logeado*/
+            acceso = new conexion();
+            DataTable cheking = acceso.buscar(
+                "select * from ",
+                "PE_claro ",
+                "WHERE  codigo='"+codigo+"'"
+                );
+            if (cheking != null)
+            {
+                if (cheking.Rows.Count == 0)
+                {
+                    result = 1;
+                }
+            }
+            else
+            {
+                result = 2;
+            }
+            return result;
         } 
     }
 
